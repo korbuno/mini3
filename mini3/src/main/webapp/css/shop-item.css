@@ -1,0 +1,90 @@
+/*!
+ * Start Bootstrap - Shop Item (https://startbootstrap.com/template-overviews/shop-item)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+div.container{
+	font-size: .8em;
+	width: 960px;
+	margin: 0 auto 10px;
+	padding: 30px 20px 50px;
+	clear: both;
+	background: #FFF;
+	border: 1px solid #EAEAEA;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#carInfotitle{
+	padding: 10px 20px;
+	border-top: 2px solid #555;
+	border-left: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+	background: #fcfcfc;
+}
+
+#carInfotitle > div.num{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#carInfotitle > div.carName{
+	margin-top: 10px;
+	color: #333333;
+	font-weight: bold;
+	font-size: 23px;
+	letter-spacing: -2px;
+	line-height: 30px;
+	
+}
+#carInfotitle > div.price > span{
+	margin: 0px 20px 0px 0px;
+	font-size: 12px;
+	color: #333;
+}
+#carInfotitle > div.price > strong{
+	font-size: 26px;
+	color: #34c8ed;
+}
+body > div.container > div:nth-child(3) > div > table{
+	box-shadow: none;
+}
+
+body > div.container > div:nth-child(3) > div > table > tbody > tr{
+	font-size: 12px;
+	color: #666;
+}
+body > div.container > div:nth-child(3) > div > table > tbody > tr > td{
+	padding: 0;
+	border-right: 1px solid #edeeef;
+	border-bottom: 1px solid #dadbdd;
+	vertical-align: top;
+	line-height: 25px;
+}
+
+body > div.container > div:nth-child(3) > div > table > tbody > tr > td > div.opt_title{
+	border-bottom: 1px solid #dadbdd;
+	font-weight: bold;
+	color: #484848;
+	padding: 5px 0;
+	background: #f8f8f8;
+	text-align: center;
+}
+body > div.container > div:nth-child(3) > div > table > tbody > tr > td > div.val{
+	padding: 12px 0 18px 25px;
+}
+
+body > div.container > div:nth-child(4) > div{
+	text-align: center;
+}

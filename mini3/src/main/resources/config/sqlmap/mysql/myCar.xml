@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.omp.repository.mapper.MyCarMapper">
+
+	<resultMap type="board" id="boardMap">
+		<result column="board_no" property="boardNo" />
+		<result column="title" property="title" />
+		<result column="contents" property="contents" />
+		<result column="member_no" property="memberNo" />
+		<result column="status" property="status" />
+		<result column="role" property="role" />
+		<result column="reg_date" property="regDate" />
+		<result column="update_date" property="updateDate" />
+	</resultMap>
+	
+	<select id="boardList" parameterType="page" resultMap="boardMap">
+		select a.* from 
+			( select @RNUM:= @RNUM + 1 AS ROWNUM, b.*
+			  from board b, (SELECT @RNUM := 0) R
+			  order by b.board_no desc ) a
+		 where a.ROWNUM between #{begin} and #{end};
+	</select>
+	
+	<insert id="sellInsert" parameterType="board">
+		insert into board (title, phone, reg_date, role, type) values (#{title}, #{phone}, now(), #{role}, #{type});
+	</insert>
+	
+	<select id="sellDetail" parameterType="board" resultMap="boardMap">
+		select * from board where board_no = #{boardNo}
+	</select>
+	
+	<select id="confirmDetail" parameterType="int">
+		update board set status = 16 where board_no = #{boardNo}
+	</select>
+	
+	<select id="boardCount" resultType="int">
+		select count(*) from board;
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

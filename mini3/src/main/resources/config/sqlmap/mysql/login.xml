@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.omp.repository.mapper.LoginMapper">
+	<resultMap type="member" id="memberMap">
+		<result column="member_no" property="memberNo" />
+		<result column="id" property="id" />
+		<result column="pass" property="pass" />
+		<result column="name" property="name" />
+		<result column="phone" property="phone" />
+		<result column="email" property="email" />
+		<result column="reg_date" property="regDate" />
+		<result column="update_data" property="updateDate" />		
+	</resultMap>
+	
+	<select id="login" parameterType="member" resultMap="memberMap">
+		select * from member where id = #{id} and pass = #{pass}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.omp.repository.mapper.AdminMapper">
+	<resultMap type="typeCar" id="typeCarMap">
+		<result column="type_car_no" property="typeCarNo" />
+		<result column="type_car_group_no" property="typeCarGroupNo" />
+		<result column="mnf_no" property="mnfNo" />
+		<result column="val" property="val" />
+		<result column="img" property="img" />
+	</resultMap>
+	<resultMap type="mnf" id="mnfMap">
+		<result column="mnf_no" property="mnfNo" />
+		<result column="val" property="val" />
+		<result column="domestic" property="domestic" />
+		<result column="img" property="img" />
+	</resultMap>
+	<resultMap type="modelTypeCar" id="modelTypeCarMap">
+		<result column="model_type_car_no" property="modelTypeCarNo" />
+		<result column="type_car_no" property="typeCarNo" />
+		<result column="val" property="val" />
+		<result column="displacement" property="displacement" />
+		<result column="max_output" property="maxOutput" />
+		<result column="fuel_eff" property="fuelEff" />
+		<result column="release" property="release" />
+	</resultMap>
+	<resultMap type="opt" id="optMap">
+		<result column="option_no" property="optionNo" />
+		<result column="option_group_no" property="optionGroupNo" />
+		<result column="val" property="val" />
+	</resultMap>
+	
+	<resultMap type="member" id="memberMap">
+		<result column="member_no" property="memberNo" />
+		<result column="id" property="id" />
+		<result column="pass" property="pass" />
+		<result column="name" property="name" />
+		<result column="phone" property="phone" />
+		<result column="auth" property="auth" />
+	</resultMap>
+	
+	<!-- 검색  -->
+	<select id="searchTypeCar" parameterType="search" resultMap="typeCarMap">
+		select * from type_car where val like concat('%', #{val}, '%')
+	</select>
+	
+	<!-- 국내,수입 여부에따른 제조사 리스트 -->
+	<select id="mnfList" parameterType="mnf" resultMap="mnfMap" >
+		select * from mnf where domestic = #{domestic}
+	</select>
+	
+	<!-- 제조사 선택시 불러올 차종 리스트 -->
+	<select id="typeCarList" parameterType="mnf" resultMap="typeCarMap">
+		select * from type_car where mnf_no = #{mnfNo} order by val desc
+	</select>
+	
+	<!-- 차종 별 모델 리스트 -->
+	<select id="modelTypeCarList" parameterType="typeCar" resultMap="modelTypeCarMap">
+		select * from model_type_car where type_car_no = #{typeCarNo} order by val desc
+	</select>
+	
+	<!-- 옵션 리스트 -->
+	<select id="optList" resultMap="optMap">
+		select * from opt
+	</select>
+
+
+	<!-- 차량 등록 -->	
+	<select id="selectCarNo" resultType="int">select LAST_INSERT_ID()</select>
+
+	<insert id="insertOpt" parameterType="hashmap">
+		insert into opt_of_car (car_no, option_no) values (#{carNo}, #{opt})
+	</insert>
+
+	<insert id="insertCar" parameterType="carVO">
+	insert into car (model_no, special, price, accident_status, trans, cars_number, driving, color, title, contents, reg_date)
+	values (#{modelNo}, #{special}, #{price}, #{accident_status}, #{trans}, #{carsNumber}, #{driving}, #{color}, #{title}, #{contents}, now())
+	</insert>
+			
+	<insert id="insertFile" parameterType="hashmap">
+		insert into image_files (car_no, ori_name, sys_name, file_path, thumb_path, detail_thumb_path, file_size, reg_date) values (#{carNo}, #{oriName}, #{sysName}, #{filePath}, #{thumbPath}, #{detailThumbPath}, #{size}, now()) 
+	</insert>
+	
+	<!-- 멤버 관리 -->
+	<select id="memberList" resultMap="memberMap">
+		select * from member
+	</select>
+	
+	<update id="updateMember" parameterType="member">
+		update member set
+		<if test="name != null" >
+		name = #{name}
+		</if>
+		<if test="phone != null">
+		phone = #{phone}
+		</if>
+		<if test="auth != 0">
+		auth = #{auth}
+		</if>
+		where member_no = #{memberNo};
+	</update>
+	
+	<select id="autocomplete" parameterType="string" resultMap="typeCarMap">
+		select * from type_car where val like concat('%', #{key}, '%')
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

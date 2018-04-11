@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Brand</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+              <div class="search">
+                <input type="search" placeholder="자동차 검색" id="search">
+                <button class="btn btn-primary" type="button">검색&nbsp;<i class="glyphicon glyphicon-search"></i></button>
+              </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><a href="#">로그인</a></li>
+                    <li role="presentation"><a href="#">회원가입</a></li>
+                    <li role="presentation"><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="header">
+      <div class="logo">
+        <img id="banner" src="assets/img/brand.jpg">
+      </div>
+      <div id="slideshow_banner">
+        <img src="assets/img/1.jpg">
+        <div id="slideBtn">
+          <nav>
+            <ul class="pagination pagination-sm">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+        <div id="ranking">
+            <div id="tit"></div>
+            <div id="slideshow_rank">
+                <p align="center">실시간 차량 검색</p>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-inverse menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-2">
+                <ul class="nav navbar-nav" id="menu_nav">
+                    <li role="presentation"><a href="#">국산 차</a></li>
+                    <li role="presentation"><a href="#">해외 차</a></li>
+                    <li role="presentation"><a href="#">구매 상담</a></li>
+                    <li role="presentation"><a href="#">판매 상담</a></li>
+                    <li role="presentation"><a href="#">커뮤니티</a></li>
+                    <li role="presentation"><a href="#">1:1문의</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="quick_search">
+        <div id="quick_search_form">
+            <ul class="list-inline" id="search_car">
+              빠른 검색
+                <li>
+                  <select>
+                      <optgroup label="제조사">
+                          <option value="12">제조사</option>
+                          <option value="13">This is item 2</option>
+                          <option value="14">This is item 3</option>
+                      </optgroup>
+                  </select>
+                </li>
+                <li>
+                  <select>
+                      <optgroup label="모델">
+                          <option value="12">모델</option>
+                          <option value="13">This is item 2</option>
+                          <option value="14">This is item 3</option>
+                      </optgroup>
+                  </select>
+                </li>
+                <li>
+                  <select>
+                      <optgroup label="등급">
+                          <option value="12">등급</option>
+                          <option value="13">This is item 2</option>
+                          <option value="14">This is item 3</option>
+                      </optgroup>
+                  </select>
+                </li>
+                <button class="btn btn-success btn-sm" type="button">검색</button>
+            </ul>
+        </div>
+    </div>
+    <div id="container" class="contents">
+        <div id="couslting_tab">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">구매 상담</a></li>
+                <li><a href="#tab-2" role="tab" data-toggle="tab">판매 상담</a></li>
+            </ul>
+            <div class="tab-content" id="consulting_form">
+                <div class="tab-pane active" role="tabpanel" id="tab-1">
+                    <select id="cosulting_manu">
+                        <optgroup label="This is a group">
+                            <option value="12" selected="">제조사 선택</option>
+                            <option value="13">This is item 2</option>
+                            <option value="14">This is item 3</option>
+                        </optgroup>
+                    </select>
+                    <select id="cosulting_model">
+                        <optgroup label="This is a group">
+                            <option value="12" selected="">모델 선택</option>
+                            <option value="13">This is item 2</option>
+                            <option value="14">This is item 3</option>
+                        </optgroup>
+                    </select>
+                    <select id="cosulting_year">
+                        <optgroup label="This is a group">
+                            <option value="12" selected="">연식 선택</option>
+                            <option value="13">This is item 2</option>
+                            <option value="14">This is item 3</option>
+                        </optgroup>
+                    </select>
+                    <p class="lead text-center">보내는분 연락처</p>
+                    <div id="telno">
+                        <select class="input-sm" id="cosulting_phone1">
+                            <optgroup label="This is a group">
+                                <option value="12" selected="">010</option>
+                                <option value="13">This is item 2</option>
+                                <option value="14">This is item 3</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" id="cosulting_phone2">
+                        <input type="text" id="cosulting_phone3">
+                        <button class="btn btn-default" type="button" id="phone_submit">무료 상담신청</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="recommend">
+          <p>추천차량</p>
+          <ul class="list-inline">
+              <li class="car_photo_recommend">
+                <img src="assets/img/1.jpg">
+                <div class="carName">car1</div>
+                <div class="carInfo">super car</div>
+                <div class="carPrice">300만원</div>
+              </li>
+              <li class="car_photo_recommend">
+                <img src="assets/img/1.jpg">
+                <div class="carName">car1</div>
+                <div class="carInfo">super car</div>
+                <div class="carPrice">300만원</div>
+              </li>
+              <li class="car_photo_recommend">
+                <img src="assets/img/1.jpg">
+                <div class="carName">car1</div>
+                <div class="carInfo">super car</div>
+                <div class="carPrice">300만원</div>
+              </li>
+              <li class="car_photo_recommend">
+                <img src="assets/img/1.jpg">
+                <div class="carName">car1</div>
+                <div class="carInfo">super car</div>
+                <div class="carPrice">300만원</div>
+              </li>
+          </ul>
+          <div>
+            <button style="width: 100%">더보기</button>
+          </div>
+        </div>
+
+        <div id="photo_zone">
+            <p>차량리스트</p>
+            <ul class="list-inline">
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+                <li class="car_photo">
+                  <img src="assets/img/1.jpg">
+                  <div class="carName">car1</div>
+                  <div class="carInfo">super car</div>
+                  <div class="carPrice">300만원</div>
+                </li>
+
+            </ul>
+            <div>
+              <button style="width: 100%">더보기</button>
+            </div>
+        </div>
+
+        <div id="profile">
+          <div style="background: #161616; color:white;" align="center">중고차 무료상담</div>
+          <ul class="list-inline">
+            <li align="center">
+              <img src="assets/img/qwer5678.jpg">
+              <div style="font-size:15px">우수상담원 윤현구</div>
+              <div style="font-size:12px">24시간 친절상담! 20세이상 누구나 할부가능! 보험료 및 여윳돈 포함 전액할부</div><hr>
+              <div>123-456-7890</div>
+              <div>
+                <button>1:1문자상담</button>
+                <button>추천차량</button>
+              </div>
+            </li>
+            <li align="center">
+              <img src="assets/img/i13506492079.jpg">
+              <div style="font-size:15px">우수상담원 윤현구</div>
+              <div style="font-size:12px">24시간 친절상담! 20세이상 누구나 할부가능! 보험료 및 여윳돈 포함 전액할부</div><hr>
+              <div>123-456-7890</div>
+              <div>
+                <button>1:1문자상담</button>
+                <button>추천차량</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <div class="map">
+      <div id="map" style="width:500px;height:400px;">
+      </div>
+
+    </div>
+
+
+    <!-- 푸터 -->
+    <div class="footer">
+      <div class="inner">
+        <p class="copyright">ⓒ 2017. 중고차쇼핑몰 all rights reserved.</p>
+      </div>
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f05542d9d1637130c65b8679dcc6e3b0"></script>
+    <script>
+      <!-- 지도 -->
+      var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+      var options = { //지도를 생성할 때 필요한 기본 옵션
+      center: new daum.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+      level: 3 //지도의 레벨(확대, 축소 정도)
+      };
+
+      var map = new daum.maps.Map(container, options);
+    </script>
+</body>
+
+</html>
